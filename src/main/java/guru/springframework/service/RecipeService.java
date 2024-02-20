@@ -1,6 +1,7 @@
 package guru.springframework.service;
 
 import guru.springframework.domain.Recipe;
+import guru.springframework.exception.NotFoundException;
 import guru.springframework.repository.CategoryRepository;
 import guru.springframework.repository.RecipeRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class RecipeService {
             return recipeOptional.get();
         }
         else
-            throw new RuntimeException("oh");
+            throw new NotFoundException("Recipe Not found, For Id Value: " + id);
     }
 
     public Recipe saveRecipe(Recipe recipe) {

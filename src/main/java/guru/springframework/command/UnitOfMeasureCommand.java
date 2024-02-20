@@ -13,6 +13,6 @@ import javax.persistence.Id;
 @Getter
 @NoArgsConstructor
 public class UnitOfMeasureCommand {
-private Long id;
+    private Long id;
     private String uom;
 }
